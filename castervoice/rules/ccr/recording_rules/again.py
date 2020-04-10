@@ -13,8 +13,8 @@ _history = recognition_history.get_and_register_history(10)
 class Again(MappingRule):
 
     mapping = {
-        "again (<n> [(times|time)] | do)":
-            R(Function(lambda n: Again._create_asynchronous(n)), show=False),  # pylint: disable=E0602
+        "repeat <n>":
+            R(Function(lambda n: Again._create_asynchronous(n-1)), show=False),  # pylint: disable=E0602
     }
     extras = [IntegerRefST("n", 1, 50)]
     defaults = {"n": 1}

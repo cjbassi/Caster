@@ -156,8 +156,8 @@ class Navigation(MergeRule):
             R(Key("%(direction)s")*Repeat(extra='nnavi500'), rdescript="arrow keys"),
         "(lease wally | latch) [<nnavi10>]":
             R(Key("home:%(nnavi10)s")),
-        "(ross wally | ratch) [<nnavi10>]":
-            R(Key("end:%(nnavi10)s")),
+        # "(ross wally | ratch) [<nnavi10>]":
+        #     R(Key("end:%(nnavi10)s")),
         "sauce wally [<nnavi10>]":
             R(Key("c-home:%(nnavi10)s")),
         "dunce wally [<nnavi10>]":
@@ -271,10 +271,10 @@ class Navigation(MergeRule):
         Dictation("textnv"),
         Choice("enclosure", _dtpd),
         Choice("direction", {
-            "dunce": "down",
-            "sauce": "up",
-            "lease": "left",
-            "ross": "right",
+            "go left": "left",
+            "go right": "right",
+            "go up": "up",
+            "go down": "down",
         }),
         modifier_choice_object,
         Choice("button_dictionary_1", button_dictionary_1),
@@ -288,9 +288,9 @@ class Navigation(MergeRule):
             "gerrish": 3,
             "sing": 4,
             "laws": 5,
-            "say": 6,
-            "cop": 7,
-            "slip": 8,
+            "phrase": 6,
+            "sentence": 7,
+            "lower": 8,
         }),
         Choice(
             "spacing", {

@@ -69,7 +69,7 @@ setuptools.setup(
         "appdirs",
         "scandir",
         "pyvda;platform_system=='Windows'",
-    ],
+    ],dependency_links=['../dragonfly#egg=dragonfly2-1.8'],
     cmdclass={'install': new_install,
               'develop': dev_install,
               },

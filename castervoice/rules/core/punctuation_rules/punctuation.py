@@ -25,15 +25,31 @@ class Punctuation(MergeRule):
             R(Text("%(long)s" + "\\" + "%(long)s"))*Repeat(extra="npunc"),
         "<double_text_punc> [<npunc>]":
             R(Text("%(double_text_punc)s") + Key("left"))*Repeat(extra="npunc"),
-        "tabby [<npunc>]":
+        "tab [<npunc>]":
             R(Key("tab"))*Repeat(extra="npunc"),
-        "(back | shin) tabby [<npunc>]":
-            R(Key("s-tab"))*Repeat(extra="npunc"),
+        "(back|backspace) [<npunc>]":
+            R(Key("backspace"))*Repeat(extra="npunc"),
+        "delete [<npunc>]":
+            R(Key("delete"))*Repeat(extra="npunc"),
+        "enter [<npunc>]":
+            R(Key("enter"))*Repeat(extra="npunc"),
+        "(cape|escape) [<npunc>]":
+            R(Key("escape"))*Repeat(extra="npunc"),
+        "home [<npunc>]":
+            R(Key("home"))*Repeat(extra="npunc"),
+        "end [<npunc>]":
+            R(Key("end"))*Repeat(extra="npunc"),
+        "page up [<npunc>]":
+            R(Key("page up"))*Repeat(extra="npunc"),
+        "page down [<npunc>]":
+            R(Key("page down"))*Repeat(extra="npunc"),
+        # "(back | shin) tabby [<npunc>]":
+        #     R(Key("s-tab"))*Repeat(extra="npunc"),
         "boom [<npunc>]":
             R(Text(", "))*Repeat(extra="npunc"),
         "bam [<npunc>]":
             R(Text(". "))*Repeat(extra="npunc"),
-        "ace [<npunc100>]":
+        "space [<npunc100>]":
             R(Text(" "))*Repeat(extra="npunc100"),
     }
 

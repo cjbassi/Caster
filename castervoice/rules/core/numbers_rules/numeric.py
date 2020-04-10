@@ -17,7 +17,7 @@ class Numbers(MergeRule):
     mapping = {
         "word number <wn>":
             R(Function(word_number, extra="wn")),
-        "numb <wnKK>":
+        "<wnKK>":
             R(Function(numbers2, extra="wnKK"),
               rspec="Number"),
     }

@@ -151,10 +151,10 @@ class TextManipulation(MergeRule):
         Choice("single_character", character_dict),
 
         Choice("direction", {
-            "lease": "left",
-            "ross": "right",
-            "sauce": "up",
-            "dunce": "down",
+            "go left": "left",
+            "go right": "right",
+            "go up": "up",
+            "go down": "down",
             # note: "sauce" (i.e. "up") will be treated the same as "lease" (i.e. "left") except that
             # the default number_of_lines_to_search will be set to 3
             # in the same way, "dunce" (i.e. "down") will be treated the same as

@@ -162,8 +162,8 @@ class Navigation(MergeRule):
             R(Key("c-home:%(nnavi10)s")),
         "dunce wally [<nnavi10>]":
             R(Key("c-end:%(nnavi10)s")),
-        "bird [<nnavi500>]":
-            R(Key("c-left:%(nnavi500)s")),
+        # "bird [<nnavi500>]":
+        #     R(Key("c-left:%(nnavi500)s")),
         "firch [<nnavi500>]":
             R(Key("c-right:%(nnavi500)s")),
         "brick [<nnavi500>]":
@@ -271,10 +271,10 @@ class Navigation(MergeRule):
         Dictation("textnv"),
         Choice("enclosure", _dtpd),
         Choice("direction", {
-            "go left": "left",
-            "go right": "right",
-            "go up": "up",
-            "go down": "down",
+            "left": "left",
+            "right": "right",
+            "up": "up",
+            "down": "down",
         }),
         modifier_choice_object,
         Choice("button_dictionary_1", button_dictionary_1),
